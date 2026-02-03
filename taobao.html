@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝 - 商品详情</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Arial, sans-serif; }
+        body { background-color: #f7f7f7; padding-bottom: 60px; }
+
+        /* 顶部导航 */
+        .tb-header { position: fixed; top: 0; left: 0; right: 0; height: 44px; display: flex; justify-content: space-between; align-items: center; padding: 0 10px; background: rgba(255,255,255,0.95); z-index: 100; }
+        .tb-header i { font-size: 20px; color: #333; cursor: pointer; }
+
+        /* 商品图 */
+        .product-img { width: 100%; height: 375px; object-fit: cover; display: block; }
+
+        /* 商品信息卡片 */
+        .info-card { background: white; padding: 12px; margin-bottom: 10px; }
+        
+        .price-row { display: flex; align-items: baseline; color: #FF5000; margin-bottom: 8px; }
+        .currency { font-size: 14px; font-weight: bold; }
+        .price { font-size: 24px; font-weight: bold; }
+        .price-tag { background: #FFE4DD; color: #FF5000; font-size: 10px; padding: 2px 4px; border-radius: 2px; margin-left: 5px; }
+        
+        .product-title { font-size: 16px; font-weight: bold; line-height: 1.4; color: #051B28; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        
+        .sales-row { display: flex; justify-content: space-between; font-size: 12px; color: #999; margin-top: 10px; }
+
+        /* 优惠券部分 */
+        .coupon-row { display: flex; align-items: center; justify-content: space-between; font-size: 13px; }
+        .coupon-label { color: #999; margin-right: 10px; }
+        .coupon-tag { background: url('https://gw.alicdn.com/tfs/TB1.X.sRFXXXXX.XFXXXXXXXXXX-138-36.png') no-repeat; background-size: 100% 100%; color: #FF5000; padding: 2px 8px; font-size: 12px; }
+        
+        /* 底部操作栏 */
+        .action-bar { position: fixed; bottom: 0; left: 0; right: 0; height: 50px; background: white; display: flex; align-items: center; box-shadow: 0 -1px 5px rgba(0,0,0,0.05); padding-right: 10px; max-width: 450px; margin: 0 auto; }
+        
+        .icons-group { flex: 1; display: flex; justify-content: space-around; }
+        .icon-btn { display: flex; flex-direction: column; align-items: center; font-size: 10px; color: #666; cursor: pointer;}
+        .icon-btn i { font-size: 18px; margin-bottom: 2px; }
+        .icon-btn.active { color: #FF5000; }
+
+        .btn-group { display: flex; width: 200px; height: 36px; border-radius: 18px; overflow: hidden; color: white; font-size: 14px; font-weight: bold; text-align: center; line-height: 36px; }
+        .btn-cart { flex: 1; background: linear-gradient(to right, #FFC500, #FF9402); cursor: pointer; }
+        .btn-buy { flex: 1; background: linear-gradient(to right, #FF7A00, #FE0507); cursor: pointer; }
+
+        /* PC端适配 */
+        @media (min-width: 768px) {
+            body { max-width: 450px; margin: 0 auto; box-shadow: 0 0 20px rgba(0,0,0,0.1); min-height: 100vh;}
+            .tb-header, .action-bar { max-width: 450px; margin: 0 auto; left: auto; right: auto; }
+            .tb-header { left: 50%; transform: translateX(-50%); }
+            .action-bar { left: 50%; transform: translateX(-50%); }
+        }
+    </style>
+  <script type="module" crossorigin src="/Tracker-G-M-ZH/assets/taobao-CyPfLbKp.js"></script>
+  <link rel="modulepreload" crossorigin href="/Tracker-G-M-ZH/assets/index-CZBgvZ6j.js">
+</head>
+<body>
+    <div class="tb-header">
+        <i class="fas fa-chevron-left" onclick="history.back()"></i>
+        <div style="font-weight: bold; opacity: 0;" id="header-title">商品详情</div>
+        <i class="fas fa-ellipsis-h"></i>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600&q=80" class="product-img">
+
+    <div class="info-card">
+        <div class="price-row">
+            <span class="currency">¥</span>
+            <span class="price">299</span>
+            <span class="price-tag">新品尝鲜</span>
+        </div>
+        <div class="product-title">
+            MAC魅可口红经典子弹头chili小辣椒显白正品 
+        </div>
+        <div class="sales-row">
+            <span>推荐 4.9</span>
+            <span>月销 10万+</span>
+            <span>上海</span>
+        </div>
+    </div>
+
+    <div class="info-card coupon-row" id="coupon-section">
+        <div>
+            <span class="coupon-label">优惠</span>
+            <span class="coupon-tag">满300减30</span>
+            <span class="coupon-tag" style="margin-left: 5px;">店铺券</span>
+        </div>
+        <i class="fas fa-chevron-right" style="color:#ccc; font-size: 12px;"></i>
+    </div>
+
+    <div class="info-card">
+        <div style="display:flex; justify-content:space-between; margin-bottom:10px; font-size:14px;">
+            <span>宝贝评价 (2333)</span>
+            <span style="color:#FF5000">查看全部 ></span>
+        </div>
+        <div style="font-size:12px; color:#333; line-height:1.5;">
+            <div style="display:flex; align-items:center; margin-bottom:5px;">
+                <img src="https://randomuser.me/api/portraits/women/1.jpg" style="width:20px;height:20px;border-radius:50%;margin-right:5px;">
+                <span style="color:#999;">t***1</span>
+            </div>
+            颜色超级正，薄涂厚涂都好看，显白绝了！发货也很快，包装很严实。
+        </div>
+    </div>
+
+    <div style="height: 500px; text-align: center; padding-top: 50px; color: #ccc;">
+        -- 详情图加载中 -- <br>
+        (继续下滑产生更多视窗数据)
+    </div>
+
+    <div class="action-bar">
+        <div class="icons-group">
+            <div class="icon-btn">
+                <i class="fas fa-store"></i>
+                店铺
+            </div>
+            <div class="icon-btn">
+                <i class="far fa-comment-dots"></i>
+                客服
+            </div>
+            <div class="icon-btn">
+                <i class="far fa-star"></i>
+                收藏
+            </div>
+        </div>
+        <div class="btn-group">
+            <div class="btn-cart" id="btn-add-cart">加入购物车</div>
+            <div class="btn-buy" id="btn-buy-now">立即购买</div>
+        </div>
+    </div>
+
+    
+    <script>
+        // 模拟滚动时顶部标题显示
+        window.addEventListener('scroll', () => {
+            const title = document.getElementById('header-title');
+            if(window.scrollY > 100) {
+                title.style.opacity = 1;
+                title.style.transition = 'opacity 0.3s';
+            } else {
+                title.style.opacity = 0;
+            }
+        });
+    </script>
+</body>
+</html>
