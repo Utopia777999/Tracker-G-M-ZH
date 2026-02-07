@@ -1,1 +1,0 @@
-import{T as e}from"./index-eJDWC6-a.js";new e({appId:"joyoung-flagship-003",userId:"user_healthy_life"});document.getElementById("btn-buy").addEventListener("click",()=>{console.log("Joyoung: 触发购买"),alert("感谢支持国货！")});

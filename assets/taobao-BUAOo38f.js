@@ -1,1 +1,0 @@
-import{T as e}from"./index-eJDWC6-a.js";new e({appId:"taobao-shop-002",userId:"user_9527"});document.getElementById("btn-add-cart").addEventListener("click",()=>{console.log("业务层：触发加入购物车")});document.getElementById("btn-buy-now").addEventListener("click",()=>{console.log("业务层：触发立即购买")});
