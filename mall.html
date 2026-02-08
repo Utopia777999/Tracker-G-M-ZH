@@ -1,9 +1,9 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>好物商城 - 官方正品</title>
+    <title>模拟商城 - 官方正品</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
@@ -51,8 +51,8 @@
         .tab-item { display: flex; flex-direction: column; align-items: center; font-size: 10px; color: #999; }
         .tab-item.active { color: #ff2442; }
     </style>
-  <script type="module" crossorigin src="/Tracker-G-M-ZH/assets/mall-C_wGpFlL.js"></script>
-  <link rel="modulepreload" crossorigin href="/Tracker-G-M-ZH/assets/index-DggJ3s0W.js">
+  <script type="module" crossorigin src="/Tracker-G-M-ZH/assets/mall-TaGhdivI.js"></script>
+  <link rel="modulepreload" crossorigin href="/Tracker-G-M-ZH/assets/index-BVuUjSNx.js">
 </head>
 <body>
     <div class="mall-header">
@@ -93,18 +93,18 @@
     <script>
         const goodsDB = [
             // 特殊页面
-            { id: 'joyoung', name: '九阳不用手洗破壁机 家用降噪豆浆机', price: '399', img: 'https://images.unsplash.com/photo-1574315042622-0d67681347d4?w=300&q=80', tag: '自营', link: 'joyoung.html' },
-            { id: 'taobao', name: 'MAC魅可子弹头口红 chill小辣椒色', price: '170', img: 'https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=300&q=80', tag: '热销', link: 'taobao.html' },
+            { id: 'joyoung', name: '模拟品牌不用手洗破壁机 家用降噪豆浆机', price: '399', img: 'https://images.unsplash.com/photo-1585325701165-351af916e581?w=500&q=80', tag: '自营', link: 'joyoung.html' },
+            { id: 'taobao', name: '模拟品牌子弹头口红 chill小辣椒色', price: '170', img: 'https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=300&q=80', tag: '热销', link: 'taobao.html' },
             
             // 通用页面 (product.html)
-            { id: 'sony_headphone', name: 'Sony/索尼 WH-1000XM5 头戴式无线蓝牙降噪耳机', price: '2499', img: 'https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=300&q=80' },
-            { id: 'nike_shoes', name: 'Nike耐克官方 Dunk Low熊猫 复古休闲板鞋', price: '749', img: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&q=80', tag: '新品' },
-            { id: 'dw_watch', name: 'Daniel Wellington/DW手表女 简约流金表', price: '1290', img: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&q=80' },
-            { id: 'chanel_perfume', name: 'Chanel/香奈儿 嘉柏丽尔天性香水 持久留香', price: '1850', img: 'https://images.unsplash.com/photo-1541643600914-78b084683601?w=300&q=80' },
-            { id: 'coffee_maker', name: '德龙全自动咖啡机 家用现磨意式浓缩', price: '3500', img: 'https://images.unsplash.com/photo-1550959088-755787966953?w=300&q=80', tag: '特价' },
-            { id: 'kindle', name: 'Kindle Paperwhite 5 电子书阅读器 墨水屏', price: '1099', img: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=300&q=80' },
-            { id: 'lego_car', name: 'LEGO乐高 机械组 法拉利旗舰跑车积木', price: '2999', img: 'https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?w=300&q=80' },
-            { id: 'herman_chair', name: 'Herman Miller Aeron 人体工学椅 办公椅', price: '12000', img: 'https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?w=300&q=80' }
+            { id: 'sim_headphone', name: '模拟品牌/SoundTech 无线蓝牙降噪耳机', price: '2499', img: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&q=80' },
+            { id: 'sim_shoes', name: '模拟品牌/SportX 复古休闲板鞋', price: '749', img: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&q=80', tag: '新品' },
+            { id: 'sim_watch', name: '模拟品牌/TimeMaster 简约流金表', price: '1290', img: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&q=80' },
+            { id: 'sim_perfume', name: '模拟品牌/ScentLab 嘉柏丽尔天性香水', price: '1850', img: 'https://images.unsplash.com/photo-1541643600914-78b084683601?w=300&q=80' },
+            { id: 'sim_coffeemaker', name: '模拟品牌/BrewMaster 全自动咖啡机', price: '3500', img: 'https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=300&q=80', tag: '特价' },
+            { id: 'sim_ebook', name: '模拟品牌/ReadMate 电子书阅读器 墨水屏', price: '1099', img: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=300&q=80' },
+            { id: 'sim_toycar', name: '模拟品牌/BlockMaster 旗舰跑车积木', price: '2999', img: 'https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?w=300&q=80' },
+            { id: 'sim_chair', name: '模拟品牌/ErgoChair 人体工学办公椅', price: '12000', img: 'https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?w=300&q=80' }
         ];
 
         const container = document.getElementById('mall-list');
@@ -133,3 +133,5 @@
             container.appendChild(div);
         });
     </script>
+</body>
+</html>

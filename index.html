@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>小红书 - 发现美好生活</title>
+    <title>模拟社交平台 - 发现生活</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* ... 保持之前的样式不变 ... */
+        /* --- 保持原有的样式基础，增加点击反馈 --- */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'PingFang SC', 'Helvetica Neue', Arial, sans-serif; }
         body { background-color: #f5f5f5; color: #333; line-height: 1.6; }
         
@@ -36,7 +36,6 @@
         .header-icons .fa-bell { margin-left: 15px; font-size: 20px; color: #333; }
         
         /* ... content, card, footer 样式保持不变 ... */
-        /* 为了节省篇幅，这里省略了未修改的样式，请保留你原文件中的样式 */
         .content { margin-top: 50px; padding-bottom: 60px; column-count: 2; column-gap: 10px; padding: 10px; }
         .card { background-color: white; margin-bottom: 10px; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); break-inside: avoid; cursor: pointer; transition: transform 0.2s; }
         .card:active { transform: scale(0.98); }
@@ -59,17 +58,17 @@
             .footer { bottom: 0; position: fixed;}
         }
     </style>
-  <script type="module" crossorigin src="/Tracker-G-M-ZH/assets/main-D5MsJ6wF.js"></script>
-  <link rel="modulepreload" crossorigin href="/Tracker-G-M-ZH/assets/index-DggJ3s0W.js">
+  <script type="module" crossorigin src="/Tracker-G-M-ZH/assets/main-DQ_7E5uC.js"></script>
+  <link rel="modulepreload" crossorigin href="/Tracker-G-M-ZH/assets/index-BVuUjSNx.js">
 </head>
 <body>
     <div class="header">
-        <div class="logo">小红书</div>
-        <div class="search-bar"><i class="fas fa-search" style="margin-right:5px"></i> <span>口红</span></div>
+        <div class="logo">模拟社区</div>
+        <div class="search-bar"><i class="fas fa-search" style="margin-right:5px"></i> <span>搜索商品</span></div>
         <div class="header-icons">
             <a href="mall.html" class="mall-entry">
                 <i class="fas fa-store"></i>
-                <span>商城</span>
+                <span>模拟商城</span>
             </a>
             <i class="far fa-bell"></i>
         </div>
@@ -88,32 +87,35 @@
 
 
     <script>
-        // 数据源：注意第一个数据配置了跳转链接
+        // 数据源：品牌和内容已改为模拟数据
+        // 数据源：已更新失效图片
         const cardData = [
             {
                 id: 101,
-                title: "😭李佳琦没骗我！这支口红显白到发光！",
+                title: "😭博主没骗我！这支模拟口红显白到发光！",
                 image: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=500&q=80",
                 user: "美妆蛋挞",
                 likes: "10万+",
                 isAd: true,
-                targetUrl: "taobao.html" // 目标跳转地址
+                targetUrl: "taobao.html" 
             },
             {
                 id: 102,
-                title: "挑战全网最美日落，原图直出",
-                image: "https://images.unsplash.com/photo-1614597561826-6d601d36802e?w=500&q=80",
+                title: "挑战全网最美模拟日落，原图直出",
+                // 【已替换】日落风景图
+                image: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=500&q=80", 
                 user: "旅行家",
                 likes: 4522
             },
             {
-                id: 999, // 特殊 ID
-                title: "🔥【官方补贴】九阳免洗豆浆机，早八人续命神器！",
-                image: "https://images.unsplash.com/photo-1574315042622-0d67681347d4?w=500&q=80",
-                user: "九阳Joyoung",
-                likes: "广告", // 特殊显示
+                id: 999, 
+                title: "🔥【官方补贴】模拟品牌免洗破壁机，早八人续命神器！",
+                // 【已替换】厨房电器/搅拌机图
+                image: "https://images.unsplash.com/photo-1585325701165-351af916e581?w=500&q=80", 
+                user: "模拟品牌官方",
+                likes: "广告", 
                 isAd: true,
-                targetUrl: "joyoung.html" // 跳转到九阳页面
+                targetUrl: "joyoung.html" 
             },
             {
                 id: 103,
@@ -125,7 +127,8 @@
             {
                 id: 104,
                 title: "沉浸式回家，独居女生的快乐",
-                image: "https://images.unsplash.com/photo-1556910103-1c02745a30bf?w=500&q=80",
+                // 【已替换】温馨家居室内图
+                image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&q=80", 
                 user: "宅宅",
                 likes: "1.2万"
             },
