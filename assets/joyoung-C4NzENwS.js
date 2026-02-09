@@ -1,0 +1,1 @@
+import{T as e}from"./index-DL0f2xN0.js";new e({appId:"simulated-brand-flagship",userId:"user_healthy_life"});document.getElementById("btn-buy").addEventListener("click",()=>{console.log("SimuBrand: 触发购买"),alert("感谢支持模拟品牌！")});
