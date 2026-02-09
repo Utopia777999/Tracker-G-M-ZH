@@ -51,7 +51,7 @@
         .tab-item { display: flex; flex-direction: column; align-items: center; font-size: 10px; color: #999; }
         .tab-item.active { color: #ff2442; }
     </style>
-  <script type="module" crossorigin src="/Tracker-G-M-ZH/assets/mall-TaGhdivI.js"></script>
+  <script type="module" crossorigin src="/Tracker-G-M-ZH/assets/mall-CgpArHUw.js"></script>
   <link rel="modulepreload" crossorigin href="/Tracker-G-M-ZH/assets/index-BVuUjSNx.js">
 </head>
 <body>
@@ -89,49 +89,5 @@
         <div class="tab-item"><i class="fas fa-shopping-bag" style="font-size:20px"></i>购物车</div>
         <div class="tab-item"><i class="fas fa-user" style="font-size:20px"></i>我的</div>
     </div>
-
-    <script>
-        const goodsDB = [
-            // 特殊页面
-            { id: 'joyoung', name: '模拟品牌不用手洗破壁机 家用降噪豆浆机', price: '399', img: 'https://images.unsplash.com/photo-1585325701165-351af916e581?w=500&q=80', tag: '自营', link: 'joyoung.html' },
-            { id: 'taobao', name: '模拟品牌子弹头口红 chill小辣椒色', price: '170', img: "/assets/mmexport1770633966545.jpg", tag: '热销', link: 'taobao.html' },
-            
-            // 通用页面 (product.html)
-            { id: 'sim_headphone', name: '模拟品牌/SoundTech 无线蓝牙降噪耳机', price: '2499', img: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&q=80' },
-            { id: 'sim_shoes', name: '模拟品牌/SportX 复古休闲板鞋', price: '749', img: '/assets/mmexport1770633975215.jpg', tag: '新品' },
-            { id: 'sim_watch', name: '模拟品牌/TimeMaster 简约流金表', price: '1290', img: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&q=80' },
-            { id: 'sim_perfume', name: '模拟品牌/ScentLab 嘉柏丽尔天性香水', price: '1850', img: '/assets/mmexport1770633977450.jpg' },
-            { id: 'sim_coffeemaker', name: '模拟品牌/BrewMaster 全自动咖啡机', price: '3500', img: 'https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=300&q=80', tag: '特价' },
-            { id: 'sim_ebook', name: '模拟品牌/ReadMate 电子书阅读器 墨水屏', price: '1099', img: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=300&q=80' },
-            { id: 'sim_toycar', name: '模拟品牌/BlockMaster 旗舰跑车积木', price: '2999', img: 'https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?w=300&q=80' },
-            { id: 'sim_chair', name: '模拟品牌/ErgoChair 人体工学办公椅', price: '12000', img: 'https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?w=300&q=80' }
-        ];
-
-        const container = document.getElementById('mall-list');
-        
-        goodsDB.forEach(item => {
-            const targetUrl = item.link || `product.html?id=${item.id}`;
-            const tagHtml = item.tag ? `<span class="goods-tag">${item.tag}</span>` : '';
-
-            const div = document.createElement('div');
-            div.className = 'goods-card';
-            
-            // 🔥 优化跳转逻辑：增加 150ms 延迟，确保 IDB 数据写入成功
-            div.onclick = () => {
-                setTimeout(() => {
-                    location.href = targetUrl;
-                }, 150); 
-            };
-            
-            div.innerHTML = `
-                <img src="${item.img}" class="goods-img" loading="lazy">
-                <div class="goods-info">
-                    <div class="goods-name">${item.name} ${tagHtml}</div>
-                    <div class="goods-price"><span>¥</span>${item.price}</div>
-                </div>
-            `;
-            container.appendChild(div);
-        });
-    </script>
 </body>
 </html>
